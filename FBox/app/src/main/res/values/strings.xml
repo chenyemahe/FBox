@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FBox</string>
+
+    <!-- language page -->
+    <string name="tv_language_title"><b>CHOOSE YOUR\nLANGUAGE</b></string>
+    <string name="bt_next">NEXT</string>
+</resources>

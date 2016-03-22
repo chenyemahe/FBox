@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="language">
+        <item>English</item>
+        <item>Mandarin</item>
+        <item>Spanish</item>
+        <item>Hindi</item>
+        <item>Portuguese</item>
+        <item>Arabic</item>
+        <item>apanese</item>
+        <item>Russia</item>
+        <item>German</item>
+        <item>French</item>
+        <item>Italian</item>
+        <item>Bengali</item>
+        <item>Punjabi</item>
+    </array>
+</resources>
