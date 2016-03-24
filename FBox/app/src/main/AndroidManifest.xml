@@ -19,6 +19,10 @@
         <activity android:name=".languagelist.LanguageSelectionPage">
 
         </activity>
+
+        <activity android:name=".news_sources.NewsSourcesPage">
+
+        </activity>
     </application>
 
 </manifest>

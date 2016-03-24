@@ -24,11 +24,22 @@ public class FbUtils {
     public static final String FUTURE_BOX_STATE_12 = "future_box_state_12";
     public static final String FUTURE_BOX_STATE_13 = "future_box_state_13";
 
+
+    public static final String NEWS_SOURCES_1 = "news_sources_1";
+    public static final String NEWS_SOURCES_2 = "news_sources_2";
+    public static final String NEWS_SOURCES_3 = "news_sources_3";
+    public static final String NEWS_SOURCES_4 = "news_sources_4";
+    public static final String NEWS_SOURCES_5 = "news_sources_5";
+    public static final String NEWS_SOURCES_6 = "news_sources_6";
+    public static final String NEWS_SOURCES_7 = "news_sources_7";
+    public static final String NEWS_SOURCES_8 = "news_sources_8";
+    public static final String NEWS_SOURCES_9 = "news_sources_9";
+
     public static String TAG = "Future_box";
 
     public static boolean saveLanguageCheckedState(Context context, boolean state, int position) {
         SharedPreferences prefs = context.getSharedPreferences(FUTURE_BOX_PREFS, 0);
-        Log.d(TAG, "save checked state: " + state + " at position " + position);
+        Log.d(TAG, "language save checked state: " + state + " at position " + position);
         switch (position) {
             case 0 :return prefs.edit().putBoolean(FUTURE_BOX_STATE_1, state).commit();
             case 1 :return prefs.edit().putBoolean(FUTURE_BOX_STATE_2, state).commit();
@@ -49,7 +60,7 @@ public class FbUtils {
 
     public static boolean getLanguageCheckedState(Context context, int position) {
         SharedPreferences prefs = context.getSharedPreferences(FUTURE_BOX_PREFS, 0);
-        Log.d(TAG, "get checked state at position " + position);
+        Log.d(TAG, "language get checked state at position " + position);
         switch (position) {
             case 0: return prefs.getBoolean(FUTURE_BOX_STATE_1, false);
             case 1: return prefs.getBoolean(FUTURE_BOX_STATE_2, false);
@@ -68,7 +79,41 @@ public class FbUtils {
         return false;
     }
 
-    public static int getCheckedBg(Context context) {
+    public static boolean saveNewsCheckedState(Context context, boolean state, int position) {
+        SharedPreferences prefs = context.getSharedPreferences(FUTURE_BOX_PREFS, 0);
+        Log.d(TAG, "news save checked state: " + state + " at position " + position);
+        switch (position) {
+            case 0 :return prefs.edit().putBoolean(NEWS_SOURCES_1, state).commit();
+            case 1 :return prefs.edit().putBoolean(NEWS_SOURCES_2, state).commit();
+            case 2 :return prefs.edit().putBoolean(NEWS_SOURCES_3, state).commit();
+            case 3 :return prefs.edit().putBoolean(NEWS_SOURCES_4, state).commit();
+            case 4 :return prefs.edit().putBoolean(NEWS_SOURCES_5, state).commit();
+            case 5 :return prefs.edit().putBoolean(NEWS_SOURCES_6, state).commit();
+            case 6 :return prefs.edit().putBoolean(NEWS_SOURCES_7, state).commit();
+            case 7 :return prefs.edit().putBoolean(NEWS_SOURCES_8, state).commit();
+            case 8 :return prefs.edit().putBoolean(NEWS_SOURCES_9, state).commit();
+        }
+        return false;
+    }
+
+    public static boolean getNewsCheckedState(Context context, int position) {
+        SharedPreferences prefs = context.getSharedPreferences(FUTURE_BOX_PREFS, 0);
+        Log.d(TAG, "news language get checked state at position " + position);
+        switch (position) {
+            case 0: return prefs.getBoolean(NEWS_SOURCES_1, false);
+            case 1: return prefs.getBoolean(NEWS_SOURCES_2, false);
+            case 2: return prefs.getBoolean(NEWS_SOURCES_3, false);
+            case 3: return prefs.getBoolean(NEWS_SOURCES_4, false);
+            case 4: return prefs.getBoolean(NEWS_SOURCES_5, false);
+            case 5: return prefs.getBoolean(NEWS_SOURCES_6, false);
+            case 6: return prefs.getBoolean(NEWS_SOURCES_7, false);
+            case 7: return prefs.getBoolean(NEWS_SOURCES_8, false);
+            case 8: return prefs.getBoolean(NEWS_SOURCES_9, false);
+        }
+        return false;
+    }
+
+    public static int getCheckedBg() {
         return R.color.language_select;
     }
 }

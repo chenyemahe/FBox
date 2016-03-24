@@ -1,6 +1,7 @@
-package futurebox.com.fbox.languagelist;
+package futurebox.com.fbox.news_sources;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.text.SpannableString;
 import android.text.style.StyleSpan;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -16,16 +18,18 @@ import futurebox.com.fbox.FbUtils;
 import futurebox.com.fbox.R;
 
 /**
- * Created by ye1.chen on 3/22/16.
+ * Created by ye1.chen on 3/24/16.
  */
-public class LanguageListAdapter extends BaseAdapter {
+public class NewsListAdapter extends BaseAdapter {
 
     private String[] stringList;
     private Context mContext;
-    private static int[] backgorundList = {R.mipmap.language_1, R.mipmap.language_2,R.mipmap.language_3,R.mipmap.language_4,
-            R.mipmap.language_5};
+    private static final int[] photoList = {R.mipmap.ap, R.mipmap.abc,R.mipmap.time,R.mipmap.reuters,
+            R.mipmap.cnn, R.mipmap.bbc, R.mipmap.fox, R.mipmap.guardian, R.mipmap.chicago};
+    public static final String[] news_sources = {"ASSOCIATED PRESS", "ABC NEWS", "NEW YORK TIMES", "REUTERS", "CNN", "BBC NEWS",
+            "FOX NEWS", "THE GUARDIAN", "CHICAGO TRIBUNE"};
 
-    public LanguageListAdapter(Context context) {
+    public NewsListAdapter(Context context) {
         mContext = context;
     }
 
@@ -53,10 +57,9 @@ public class LanguageListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = View.inflate(mContext,R.layout.list_item_language,null);
+            convertView = View.inflate(mContext,R.layout.list_item_news,null);
         }
-        LanguageListViewHolder viewHolder = new LanguageListViewHolder(convertView, position);
-        viewHolder.setBackground(getBackgroundResourceId(position));
+        NewsListViewHolder viewHolder = new NewsListViewHolder(convertView, position);
         viewHolder.setViewBackground();
         convertView.setTag(viewHolder);
         return convertView;
@@ -65,58 +68,49 @@ public class LanguageListAdapter extends BaseAdapter {
 
 
     public void setData() {
-        stringList = mContext.getResources().getStringArray(R.array.language);
+        stringList = news_sources;
     }
 
-    private int getBackgroundResourceId(int position){
-        return backgorundList[position%5];
-    }
-
-    public class LanguageListViewHolder implements CompoundButton.OnCheckedChangeListener{
+    public class NewsListViewHolder implements CompoundButton.OnCheckedChangeListener{
 
         private int orBackground = 0;
         private CheckBox mCheckbox;
         private TextView mTextView;
         private LinearLayout mLayout;
+        private ImageView mImageView;
         private int mPosition;
 
-        public LanguageListViewHolder(View v, int position) {
+        public NewsListViewHolder(View v, int position) {
             mPosition = position;
             mLayout = (LinearLayout) v.findViewById(R.id.ll_item);
             mCheckbox = (CheckBox) v.findViewById(R.id.checkBox);
             mCheckbox.setOnCheckedChangeListener(null);
-            mCheckbox.setChecked(FbUtils.getLanguageCheckedState(mContext,position));
-            mCheckbox.setOnCheckedChangeListener(LanguageListViewHolder.this);
+            mCheckbox.setChecked(FbUtils.getNewsCheckedState(mContext, position));
+            mCheckbox.setOnCheckedChangeListener(NewsListViewHolder.this);
             mTextView = (TextView) v.findViewById(R.id.tv_list_item_language);
             SpannableString spanString = new SpannableString((CharSequence) getItem(position));
             spanString.setSpan(new StyleSpan(Typeface.BOLD), 0, spanString.length(), 0);
             mTextView.setText(spanString);
+            mImageView = (ImageView) v.findViewById(R.id.im_news);
+            mImageView.setImageResource(photoList[position]);
         }
         public void setViewBackground() {
-            int imageResource;
-            if(FbUtils.getLanguageCheckedState(mContext,mPosition)) {
-                imageResource = FbUtils.getCheckedBg();
-                mLayout.setBackgroundResource(imageResource);
+            if(FbUtils.getNewsCheckedState(mContext, mPosition)) {
+                mLayout.setBackgroundResource(android.R.color.white);
+                mTextView.setTextColor(Color.BLACK);
             } else {
-                imageResource = getBackground();
-                mLayout.setBackgroundResource(imageResource);
+                mLayout.setBackgroundResource(R.color.language_select);
+                mTextView.setTextColor(Color.WHITE);
             }
         }
 
-        public void setBackground(int bg) {
-            orBackground = bg;
-        }
-
-        public int getBackground() {
-            return orBackground;
-        }
         public CheckBox getCheckbox() {
             return mCheckbox;
         }
 
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            FbUtils.saveLanguageCheckedState(mContext, isChecked, mPosition);
+            FbUtils.saveNewsCheckedState(mContext, isChecked, mPosition);
             setViewBackground();
         }
     }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_item">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:id="@+id/im_news"
+        android:layout_weight="2"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:paddingLeft="@dimen/activity_select_title_padding"
+        android:layout_height="100dp"
+        android:layout_weight="4"
+        android:gravity="center_vertical"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tv_list_item_language"/>
+
+    <CheckBox
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:button="@drawable/checkbox_news"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:id="@+id/checkBox"
+        android:layout_weight="1" />
+</LinearLayout>

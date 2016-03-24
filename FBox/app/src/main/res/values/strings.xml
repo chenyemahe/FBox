@@ -8,4 +8,5 @@
     <string name="tv_news">SELECT\nNEWS SOURCES</string>
     <string name="tv_l_1">SELECT</string>
     <string name="tv_l_2">ALL</string>
+    <string name="bt_back">BACK</string>
 </resources>

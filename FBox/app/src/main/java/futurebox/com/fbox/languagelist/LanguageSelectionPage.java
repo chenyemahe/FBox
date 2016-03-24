@@ -1,6 +1,7 @@
 package futurebox.com.fbox.languagelist;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -10,6 +11,7 @@ import android.widget.ListView;
 
 import futurebox.com.fbox.FbUtils;
 import futurebox.com.fbox.R;
+import futurebox.com.fbox.news_sources.NewsSourcesPage;
 
 /**
  * Created by ye1.chen on 3/22/16.
@@ -34,7 +36,9 @@ public class LanguageSelectionPage extends Activity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-
+        if (v.getId() == R.id.bt_next) {
+            startActivity(new Intent(this, NewsSourcesPage.class));
+        }
     }
 
     @Override
