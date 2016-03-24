@@ -4,12 +4,15 @@ import android.content.Context;
 import android.graphics.Typeface;
 import android.text.SpannableString;
 import android.text.style.StyleSpan;
-import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import futurebox.com.fbox.FbUtils;
 import futurebox.com.fbox.R;
 
 /**
@@ -52,11 +55,10 @@ public class LanguageListAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = View.inflate(mContext,R.layout.list_item_language,null);
         }
-        TextView textView = (TextView) convertView.findViewById(R.id.tv_list_item_language);
-        SpannableString spanString = new SpannableString((CharSequence) getItem(position));
-        spanString.setSpan(new StyleSpan(Typeface.BOLD), 0, spanString.length(), 0);
-        textView.setText(spanString);
-        textView.setBackgroundResource(getBackgroundResourceId(position));
+        LanguageListViewHolder viewHolder = new LanguageListViewHolder(convertView, position);
+        viewHolder.setBackground(getBackgroundResourceId(position));
+        viewHolder.setViewBackground();
+        convertView.setTag(viewHolder);
         return convertView;
     }
 
@@ -68,5 +70,54 @@ public class LanguageListAdapter extends BaseAdapter {
 
     private int getBackgroundResourceId(int position){
         return backgorundList[position%5];
+    }
+
+    public class LanguageListViewHolder implements CompoundButton.OnCheckedChangeListener{
+
+        private int orBackground = 0;
+        private CheckBox mCheckbox;
+        private TextView mTextView;
+        private LinearLayout mLayout;
+        private int mPosition;
+
+        public LanguageListViewHolder(View v, int position) {
+            mPosition = position;
+            mLayout = (LinearLayout) v.findViewById(R.id.ll_item);
+            mCheckbox = (CheckBox) v.findViewById(R.id.checkBox);
+            mCheckbox.setOnCheckedChangeListener(null);
+            mCheckbox.setChecked(FbUtils.getLanguageCheckedState(mContext,position));
+            mCheckbox.setOnCheckedChangeListener(LanguageListViewHolder.this);
+            mTextView = (TextView) v.findViewById(R.id.tv_list_item_language);
+            SpannableString spanString = new SpannableString((CharSequence) getItem(position));
+            spanString.setSpan(new StyleSpan(Typeface.BOLD), 0, spanString.length(), 0);
+            mTextView.setText(spanString);
+        }
+        public void setViewBackground() {
+            int imageResource;
+            if(FbUtils.getLanguageCheckedState(mContext,mPosition)) {
+                imageResource = FbUtils.getCheckedBg(mContext);
+                mLayout.setBackgroundResource(imageResource);
+            } else {
+                imageResource = getBackground();
+                mLayout.setBackgroundResource(imageResource);
+            }
+        }
+
+        public void setBackground(int bg) {
+            orBackground = bg;
+        }
+
+        public int getBackground() {
+            return orBackground;
+        }
+        public CheckBox getCheckbox() {
+            return mCheckbox;
+        }
+
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            FbUtils.saveLanguageCheckedState(mContext, isChecked, mPosition);
+            setViewBackground();
+        }
     }
 }

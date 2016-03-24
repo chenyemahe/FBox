@@ -4,4 +4,8 @@
     <!-- language page -->
     <string name="tv_language_title"><b>CHOOSE YOUR\nLANGUAGE</b></string>
     <string name="bt_next">NEXT</string>
+    <!-- news sources -->
+    <string name="tv_news">SELECT\nNEWS SOURCES</string>
+    <string name="tv_l_1">SELECT</string>
+    <string name="tv_l_2">ALL</string>
 </resources>
