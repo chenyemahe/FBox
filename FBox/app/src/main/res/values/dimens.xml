@@ -5,4 +5,6 @@
     <dimen name="activity_select_title_padding">20dp</dimen>
     <dimen name="activity_select_language_padding">40dp</dimen>
     <dimen name="activity_select_news">1dp</dimen>
+    <dimen name="activity_keyword_padding">5dp</dimen>
+    <dimen name="activity_settings_padding">30dp</dimen>
 </resources>

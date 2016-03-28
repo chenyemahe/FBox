@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@string/tv_noti_settings"
+        android:id="@+id/tv_topic"
+        android:gravity="center_vertical"
+        android:padding="@dimen/activity_select_title_padding"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@mipmap/language_title"
+        android:textColor="@color/text_color" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_bot"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_back"
+            android:id="@+id/bt_back"
+            android:layout_weight="1"
+            android:background="@mipmap/language_6"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#736f6f"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_next"
+            android:id="@+id/bt_next"
+            android:layout_weight="1"
+            android:background="@mipmap/language_6"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mid_1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_topic"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="200dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/activity_settings_padding"
+                android:text="@string/tv_from"
+                android:background="@color/string_alarm"
+                android:textColor="@android:color/white"
+                android:id="@+id/tv_from" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/activity_settings_padding"
+                android:background="@color/string_alarm"
+                android:textColor="@android:color/white"
+                android:text="@string/tv_to"
+                android:id="@+id/tv_to" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="2"
+            android:id="@+id/imageView2"
+            android:scaleType="fitXY"
+            android:src="@mipmap/time_settings" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_settings_padding"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ll_mid_1"
+        android:text="@string/tv_day"
+        android:background="@color/setting_day"
+        android:textColor="@android:color/white"
+        android:id="@+id/tv_day" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/ll_mid_2"
+        android:layout_below="@+id/tv_day"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/tv_s"
+            android:layout_weight="1"
+            android:id="@+id/tv_sun" />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/setting_day"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/tv_m"
+            android:layout_weight="1"
+            android:id="@+id/tv_mon" />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/setting_day"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/tv_t"
+            android:layout_weight="1"
+            android:id="@+id/tv_tue" />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/setting_day"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/tv_w"
+            android:layout_weight="1"
+            android:id="@+id/tv_wed" />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/setting_day"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/tv_tu"
+            android:layout_weight="1"
+            android:id="@+id/tv_thur" />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/setting_day"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/tv_f"
+            android:layout_weight="1"
+            android:id="@+id/tv_fri" />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/setting_day"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/tv_sat"
+            android:layout_weight="1"
+            android:id="@+id/tv_sat" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_settings_padding"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ll_mid_2"
+        android:text="@string/tv_noti"
+        android:background="@color/setting_day"
+        android:textColor="@android:color/white"
+        android:id="@+id/tv_not" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/ll_mid_3"
+        android:layout_below="@+id/tv_not"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="1"
+            android:layout_weight="1"
+            android:id="@+id/tv_1" />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/setting_day"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="2"
+            android:layout_weight="1"
+            android:id="@+id/tv_2" />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/setting_day"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="3"
+            android:layout_weight="1"
+            android:id="@+id/tv_3" />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/setting_day"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="4"
+            android:layout_weight="1"
+            android:id="@+id/tv_4" />
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/setting_day"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="5"
+            android:layout_weight="1"
+            android:id="@+id/tv_5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ll_mid_3"
+        android:layout_above="@+id/ll_bot"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/setting_day">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/activity_settings_padding"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/tv_dup"
+            android:id="@+id/tv_dup"
+            android:textColor="@android:color/white" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_settings_padding"
+            android:background="@android:color/white"
+            android:id="@+id/cb_dup" />
+    </LinearLayout>
+</RelativeLayout>

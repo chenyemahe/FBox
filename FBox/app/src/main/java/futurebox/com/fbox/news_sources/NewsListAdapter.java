@@ -24,7 +24,7 @@ public class NewsListAdapter extends BaseAdapter {
 
     private String[] stringList;
     private Context mContext;
-    private static final int[] photoList = {R.mipmap.ap, R.mipmap.abc,R.mipmap.time,R.mipmap.reuters,
+    private static final int[] photoList = {R.mipmap.ap, R.mipmap.abc,R.mipmap.newyour_time,R.mipmap.reuters,
             R.mipmap.cnn, R.mipmap.bbc, R.mipmap.fox, R.mipmap.guardian, R.mipmap.chicago};
     public static final String[] news_sources = {"ASSOCIATED PRESS", "ABC NEWS", "NEW YORK TIMES", "REUTERS", "CNN", "BBC NEWS",
             "FOX NEWS", "THE GUARDIAN", "CHICAGO TRIBUNE"};

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@mipmap/language_title"
+        android:padding="@dimen/activity_select_title_padding">
+
+        <TextView
+            android:id="@+id/tv_alarm"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"
+            android:text="@string/tv_alarm"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#2fa7df" />
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/divid"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_select_news">
+
+            <TextView
+                android:id="@+id/tv_l_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@mipmap/language_title"
+                android:gravity="center_vertical"
+                android:padding="@dimen/activity_keyword_padding"
+                android:text="@string/tv_add"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:drawableRight="@mipmap/plus"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_bot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@mipmap/language_6"
+            android:text="@string/bt_back" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#736f6f" />
+
+        <Button
+            android:id="@+id/bt_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@mipmap/language_6"
+            android:text="@string/bt_next" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_bot"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rl_top">
+
+        <LinearLayout
+            android:id="@+id/ll_mid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/tl_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_country"
+                        android:layout_width="116dp"
+                        android:layout_height="50dp"
+                        android:background="@color/string_alarm"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:singleLine="true"
+                        android:text="@string/tv_country"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <EditText
+                        android:id="@+id/ed_country"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="@string/tv_country_hint"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="@dimen/activity_horizontal_margin" />
+                </TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divid_alarm_1" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_city_1"
+                        android:layout_width="116dp"
+                        android:layout_height="50dp"
+                        android:background="@color/string_alarm"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:singleLine="true"
+                        android:text="@string/tv_city"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <EditText
+                        android:id="@+id/ed_city"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="@string/tv_city_hint"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="@dimen/activity_horizontal_margin" />
+                </TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divid_alarm_2" />
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tl_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_country_2"
+                        android:layout_width="116dp"
+                        android:layout_height="50dp"
+                        android:background="@color/string_alarm"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:singleLine="true"
+                        android:text="@string/tv_country"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <EditText
+                        android:id="@+id/ed_country_2"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="@string/tv_country_hint"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="@dimen/activity_horizontal_margin" />
+                </TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divid_alarm_1" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_city_2"
+                        android:layout_width="116dp"
+                        android:layout_height="50dp"
+                        android:background="@color/string_alarm"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:singleLine="true"
+                        android:text="@string/tv_city"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <EditText
+                        android:id="@+id/ed_city_2"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="@string/tv_city_hint"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="@dimen/activity_horizontal_margin" />
+                </TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divid_alarm_2" />
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tl_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_country_3"
+                        android:layout_width="116dp"
+                        android:layout_height="50dp"
+                        android:background="@color/string_alarm"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:singleLine="true"
+                        android:text="@string/tv_country"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <EditText
+                        android:id="@+id/ed_country_3"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="@string/tv_country_hint"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="@dimen/activity_horizontal_margin" />
+                </TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divid_alarm_1" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_city_3"
+                        android:layout_width="116dp"
+                        android:layout_height="50dp"
+                        android:background="@color/string_alarm"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:singleLine="true"
+                        android:text="@string/tv_city"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <EditText
+                        android:id="@+id/ed_city_3"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:hint="@string/tv_city_hint"
+                        android:inputType="textPostalAddress"
+                        android:paddingLeft="@dimen/activity_horizontal_margin" />
+                </TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divid_alarm_2" />
+            </TableLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/tv_img_1"
+                android:background="@mipmap/alarm_1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/tv_img_2"
+                android:background="@mipmap/alarm_2"  />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/tv_img_3"
+                android:background="@mipmap/alarm_3"  />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/tv_img_4"
+                android:background="@mipmap/alarm_4" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

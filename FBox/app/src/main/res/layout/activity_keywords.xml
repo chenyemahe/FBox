@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_language"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/activity_select_title_padding"
+        android:paddingStart="@dimen/activity_select_title_padding"
+        android:text="@string/tv_keyword"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/bt_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/background_dark"
+        android:text="@string/tv_ok"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/text_color_blue" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_ok"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_language">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_select_title_padding"
+                android:paddingRight="@dimen/activity_select_title_padding">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_1_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_public_healthy"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/tv_1_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_vaccine"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tableLayout_1_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_select_title_padding"
+                android:paddingRight="@dimen/activity_select_title_padding">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_immunization"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/tv_2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_hiv"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tableLayout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_select_title_padding"
+                android:paddingRight="@dimen/activity_select_title_padding">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_epidemic"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/tv_3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_zika"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/tv_3_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_diet"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tableLayout_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_select_title_padding"
+                android:paddingRight="@dimen/activity_select_title_padding">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_4_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_nutrition"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/tv_4_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_hart"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_5_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_obesity"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/tv_5_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_cholesterol"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tableLayout_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_select_title_padding"
+                android:paddingRight="@dimen/activity_select_title_padding">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_6_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_hyponatremia"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/tv_6_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_hepatitis"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/tableLayout_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_select_title_padding"
+                android:paddingRight="@dimen/activity_select_title_padding">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_7_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_diabetes"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/tv_7_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_hepatitis"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/tableLayout_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_select_title_padding"
+                android:paddingRight="@dimen/activity_select_title_padding">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_8_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_cancer"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/tv_8_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/language_6"
+                        android:drawableRight="@mipmap/plus_sign"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/activity_keyword_padding"
+                        android:paddingStart="@dimen/activity_keyword_padding"
+                        android:text="@string/tv_disease_control"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

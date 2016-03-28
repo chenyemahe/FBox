@@ -1,6 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@string/tv_topic"
+        android:id="@+id/tv_topic"
+        android:gravity="center_vertical"
+        android:padding="@dimen/activity_select_title_padding"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@mipmap/language_title"
+        android:textColor="@color/text_color" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_bot"
+        android:layout_below="@+id/tv_topic"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/scrollView">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:id="@+id/iv_1_1"
+                android:scaleType="fitXY"
+                android:src="@mipmap/topic_1"
+                android:layout_weight="1" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/iv_1_2"
+                android:scaleType="fitXY"
+                android:src="@mipmap/topic_2"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:id="@+id/iv_2_1"
+                android:scaleType="fitXY"
+                android:src="@mipmap/topic_3"
+                android:layout_weight="1" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/iv_2_2"
+                android:scaleType="fitXY"
+                android:src="@mipmap/topic_4"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:id="@+id/iv_3_1"
+                android:scaleType="fitXY"
+                android:src="@mipmap/topic_5"
+                android:layout_weight="1" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/iv_3_2"
+                android:scaleType="fitXY"
+                android:src="@mipmap/topic_6"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:id="@+id/iv_4_1"
+                android:scaleType="fitXY"
+                android:src="@mipmap/topic_7"
+                android:layout_weight="1" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/iv_4_2"
+                android:scaleType="fitXY"
+                android:src="@mipmap/topic_8"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:id="@+id/iv_5_1"
+                android:scaleType="fitXY"
+                android:src="@mipmap/topic_9"
+                android:layout_weight="1" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/iv_5_2"
+                android:scaleType="fitXY"
+                android:src="@mipmap/topic_10"
+                android:layout_weight="1" />
+        </TableRow>
+    </TableLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/ll_bot"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_back"
+            android:id="@+id/bt_back"
+            android:layout_weight="1"
+            android:background="@mipmap/language_6"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#736f6f"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_next"
+            android:id="@+id/bt_next"
+            android:layout_weight="1"
+            android:background="@mipmap/language_6"/>
+    </LinearLayout>
+
+</RelativeLayout>

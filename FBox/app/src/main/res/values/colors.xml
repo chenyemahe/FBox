@@ -6,4 +6,10 @@
     <color name="language_select">#232832</color>
     <color name="divid">#D0F7F7</color>
     <color name="text_color">#2fa7df</color>
+    <color name="text_color_blue">#01b8fc</color>
+    <color name="keyword_bg">#00b7fb</color>
+    <color name="divid_alarm_2">#242833</color>
+    <color name="divid_alarm_1">#cccccc</color>
+    <color name="string_alarm">#263554</color>
+    <color name="setting_day">#242833</color>
 </resources>

@@ -14,6 +14,7 @@ import android.widget.TextView;
 import futurebox.com.fbox.FbUtils;
 import futurebox.com.fbox.R;
 import futurebox.com.fbox.languagelist.LanguageListAdapter;
+import futurebox.com.fbox.topic.ChooseTopics;
 
 /**
  * Created by ye1.chen on 3/23/16.
@@ -51,8 +52,9 @@ public class NewsSourcesPage extends Activity implements View.OnClickListener, A
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
-            case R.id.bt_next: break;
-
+            case R.id.bt_next:
+                startActivity(new Intent(this, ChooseTopics.class));
+                break;
             case R.id.bt_back:
                 this.finish();
                 break;

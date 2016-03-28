@@ -5,8 +5,52 @@
     <string name="tv_language_title"><b>CHOOSE YOUR\nLANGUAGE</b></string>
     <string name="bt_next">NEXT</string>
     <!-- news sources -->
-    <string name="tv_news">SELECT\nNEWS SOURCES</string>
+    <string name="tv_news"><b>SELECT\nNEWS SOURCES</b></string>
+    <string name="tv_topic"><b>CHOOSE YOUR\nTOPICS</b></string>
     <string name="tv_l_1">SELECT</string>
     <string name="tv_l_2">ALL</string>
     <string name="bt_back">BACK</string>
+    <!-- keyword -->
+    <string name="tv_keyword"><b>CHOOSE KEYWORDS</b></string>
+    <string name="tv_ok"><b>OK</b></string>
+    <string name="tv_public_healthy">Public Healthy</string>
+    <string name="tv_vaccine">Vaccine</string>
+    <string name="tv_immunization">Immunization</string>
+    <string name="tv_hiv">HIV</string>
+    <string name="tv_epidemic">Epidemic</string>
+    <string name="tv_zika">Zika</string>
+    <string name="tv_diet">Diet</string>
+    <string name="tv_nutrition">Nutrition</string>
+    <string name="tv_hart">Heart disease</string>
+    <string name="tv_obesity">Obesity</string>
+    <string name="tv_cholesterol">Cholesterol</string>
+    <string name="tv_hyponatremia">Hyponatremia</string>
+    <string name="tv_diseases">Diseases</string>
+    <string name="tv_diabetes">Diabetes</string>
+    <string name="tv_hepatitis">Hepatitis</string>
+    <string name="tv_cancer">Cancer</string>
+    <string name="tv_disease_control">Disease Control</string>
+    <!-- alarm -->
+    <string name="tv_alarm"><b>ALARM</b></string>
+    <string name="tv_add">ADD\nMORE</string>
+    <string name="tv_more">MORE</string>
+    <string name="tv_country">COUNTRY</string>
+    <string name="tv_city">CITY</string>
+    <string name="tv_country_hint">Your Country</string>
+    <string name="tv_city_hint">Your City</string>
+
+    <!-- notification setting -->
+    <string name="tv_noti_settings"><b>NOTIFICATIONS\nSETTINGS</b></string>
+    <string name="tv_from"><b>FROM:</b></string>
+    <string name="tv_to"><b>TO:</b></string>
+    <string name="tv_day"><b>DAYS</b></string>
+    <string name="tv_s"><b>S</b></string>
+    <string name="tv_m"><b>M</b></string>
+    <string name="tv_t"><b>T</b></string>
+    <string name="tv_w"><b>W</b></string>
+    <string name="tv_tu"><b>T</b></string>
+    <string name="tv_f"><b>F</b></string>
+    <string name="tv_sat"><b>S</b></string>
+    <string name="tv_noti"><b>MAXIMUM NOTIFICATION / DAY:</b></string>
+    <string name="tv_dup"><b>NO DUPLICATION:</b></string>
 </resources>
