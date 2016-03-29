@@ -26,6 +26,7 @@ public class FboxNotification {
                 .setOngoing(false)
                 .setAutoCancel(true)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(message))
                 .setWhen(0);
         return mBuilder.build();
     }
