@@ -7,9 +7,8 @@
 
     <ImageView
         android:id="@+id/im_news"
-        android:layout_width="0dp"
+        android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_weight="2"
         android:scaleType="fitXY" />
 
     <LinearLayout
@@ -17,7 +16,8 @@
         android:layout_height="100dp"
         android:layout_weight="4"
         android:orientation="vertical"
-        android:paddingLeft="@dimen/activity_select_title_padding">
+        android:paddingLeft="@dimen/activity_select_title_padding"
+        android:background="@mipmap/language_title">
 
         <TextView
             android:id="@+id/tv_list_title"
@@ -25,13 +25,15 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textColor="@color/news_list_color"
+            android:textSize="10sp"/>
 
         <TextView
             android:id="@+id/tv_list_item_boday"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:layout_weight="2"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
 </LinearLayout>

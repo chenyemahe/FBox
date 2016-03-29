@@ -1,17 +1,16 @@
-package futurebox.com.fbox.menu;
+package futurebox.com.fbox;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-import futurebox.com.fbox.R;
-
 /**
- * Created by ye1.chen on 3/28/16.
+ * Created by zhengmeiling on 3/28/16.
  */
-public class Menupage extends Activity{
+public class NewsArtical extends Activity{
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_artical);
     }
 }

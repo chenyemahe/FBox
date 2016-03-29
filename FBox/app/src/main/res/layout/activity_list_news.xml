@@ -18,7 +18,7 @@
             android:layout_width="220dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:text="@string/tv_news"
+            android:text="@string/tv_list_news"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -27,36 +27,23 @@
         <LinearLayout
             android:layout_width="100dp"
             android:layout_height="70dp"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:orientation="vertical"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:padding="@dimen/activity_select_news"
-            android:background="@color/divid">
+            android:background="@color/divid"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_select_news">
 
             <TextView
-                android:id="@+id/tv_l_1"
+                android:id="@+id/tv_setting"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:gravity="bottom|center_horizontal"
-                android:layout_weight="1"
-                android:singleLine="true"
-                android:text="@string/tv_l_1"
-                android:textColor="@android:color/white"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:background="@mipmap/language_title"/>
-
-            <TextView
-                android:id="@+id/tv_l_2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:gravity="top|center_horizontal"
-                android:layout_weight="1"
-                android:singleLine="true"
-                android:text="@string/tv_l_2"
-                android:textColor="@android:color/white"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:background="@mipmap/language_title"/>
+                android:layout_height="match_parent"
+                android:background="@mipmap/language_title"
+                android:gravity="center"
+                android:padding="@dimen/activity_keyword_padding"
+                android:text="@string/tv_list_menu"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white" />
         </LinearLayout>
 
     </RelativeLayout>
@@ -69,37 +56,5 @@
         android:id="@id/listView"
         android:layout_below="@+id/rl_top"
         android:layout_above="@+id/ll_bot"/>
-
-
-    <LinearLayout
-        android:id="@+id/ll_bot"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bt_back"
-            android:id="@+id/bt_back"
-            android:layout_weight="1"
-            android:background="@mipmap/language_6"/>
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="#736f6f"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/bt_next"
-            android:id="@+id/bt_next"
-            android:layout_weight="1"
-            android:background="@mipmap/language_6"/>
-    </LinearLayout>
 
 </RelativeLayout>

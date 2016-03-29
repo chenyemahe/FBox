@@ -41,11 +41,15 @@
 
         </activity>
 
-        <activity android:name=".menu.menupage">
+        <activity android:name=".menu.Menupage">
 
         </activity>
 
         <activity android:name=".listnews.ListNewsPage">
+
+        </activity>
+
+        <activity android:name=".NewsArtical">
 
         </activity>
     </application>

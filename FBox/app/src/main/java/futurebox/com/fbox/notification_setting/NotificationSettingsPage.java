@@ -1,12 +1,14 @@
 package futurebox.com.fbox.notification_setting;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import futurebox.com.fbox.R;
+import futurebox.com.fbox.listnews.ListNewsPage;
 
 /**
  * Created by zhengmeiling on 3/27/16.
@@ -181,6 +183,7 @@ public class NotificationSettingsPage extends Activity implements View.OnClickLi
                 }
                 break;
             case R.id.bt_next:
+                startActivity(new Intent(this, ListNewsPage.class));
                 break;
             case R.id.bt_back:
                 this.finish();

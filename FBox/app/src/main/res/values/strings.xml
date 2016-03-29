@@ -53,4 +53,8 @@
     <string name="tv_sat"><b>S</b></string>
     <string name="tv_noti"><b>MAXIMUM NOTIFICATION / DAY:</b></string>
     <string name="tv_dup"><b>NO DUPLICATION:</b></string>
+
+
+    <string name="tv_list_news"><b>YOUR NEWS</b></string>
+    <string name="tv_list_menu"><b>Settings</b></string>
 </resources>

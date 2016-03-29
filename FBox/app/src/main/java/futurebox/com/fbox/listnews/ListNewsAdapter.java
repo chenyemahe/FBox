@@ -31,8 +31,10 @@ public class ListNewsAdapter extends BaseAdapter {
     public static final String[] news_sources = {"Possible diabetes cure being tested on small number of patients",
             "Scott Kelly, american astronaut, returns to Earth after 340 days in space",
             "Architecture review: Santiago Calatrava's transit hub is a Soaring Symbol of a Boondoggle",
-            "REUTERS", "CNN", "BBC NEWS",
-            "FOX NEWS", "THE GUARDIAN", "CHICAGO TRIBUNE"};
+            "Zika virus rumoors and theories that you should doubt",
+            "Spain's socialist leader takes his shot at Forming a Government",
+            "Intense Manhunt after Brussels Massacre",
+            "Ryan issues a plea for a politics of 'Ideas, not insults'"};
 
     public ListNewsAdapter(Context context) {
         mContext = context;
@@ -62,10 +64,9 @@ public class ListNewsAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = View.inflate(mContext,R.layout.list_item_news,null);
+            convertView = View.inflate(mContext,R.layout.list_item_news_list,null);
         }
         NewsListViewHolder viewHolder = new NewsListViewHolder(convertView, position);
-        viewHolder.setViewBackground();
         convertView.setTag(viewHolder);
         return convertView;
     }
@@ -76,47 +77,26 @@ public class ListNewsAdapter extends BaseAdapter {
         stringList = news_sources;
     }
 
-    public class NewsListViewHolder implements CompoundButton.OnCheckedChangeListener{
-
-        private int orBackground = 0;
-        private CheckBox mCheckbox;
+    public class NewsListViewHolder{
         private TextView mTextView;
-        private LinearLayout mLayout;
+        private TextView mTextView2;
         private ImageView mImageView;
         private int mPosition;
 
         public NewsListViewHolder(View v, int position) {
             mPosition = position;
-            mLayout = (LinearLayout) v.findViewById(R.id.ll_item);
-            mCheckbox = (CheckBox) v.findViewById(R.id.checkBox);
-            mCheckbox.setOnCheckedChangeListener(null);
-            mCheckbox.setChecked(FbUtils.getNewsCheckedState(mContext, position));
-            mCheckbox.setOnCheckedChangeListener(NewsListViewHolder.this);
-            mTextView = (TextView) v.findViewById(R.id.tv_list_item_language);
-            SpannableString spanString = new SpannableString((CharSequence) getItem(position));
+            mTextView = (TextView) v.findViewById(R.id.tv_list_title);
+            SpannableString spanString = new SpannableString(news_title[position]);
             spanString.setSpan(new StyleSpan(Typeface.BOLD), 0, spanString.length(), 0);
             mTextView.setText(spanString);
+
+            mTextView2 = (TextView) v.findViewById(R.id.tv_list_item_boday);
+            SpannableString spanString2 = new SpannableString(news_sources[position]);
+            spanString2.setSpan(new StyleSpan(Typeface.BOLD), 0, spanString.length(), 0);
+            mTextView2.setText(spanString2);
+
             mImageView = (ImageView) v.findViewById(R.id.im_news);
             mImageView.setImageResource(photoList[position]);
-        }
-        public void setViewBackground() {
-            if(FbUtils.getNewsCheckedState(mContext, mPosition)) {
-                mLayout.setBackgroundResource(android.R.color.white);
-                mTextView.setTextColor(Color.BLACK);
-            } else {
-                mLayout.setBackgroundResource(R.color.language_select);
-                mTextView.setTextColor(Color.WHITE);
-            }
-        }
-
-        public CheckBox getCheckbox() {
-            return mCheckbox;
-        }
-
-        @Override
-        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            FbUtils.saveNewsCheckedState(mContext, isChecked, mPosition);
-            setViewBackground();
         }
     }
 }
