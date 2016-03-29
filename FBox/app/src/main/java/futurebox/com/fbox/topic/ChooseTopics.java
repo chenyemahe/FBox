@@ -30,17 +30,28 @@ public class ChooseTopics extends Activity implements View.OnClickListener {
 
     private Button mBack;
     private Button mNext;
+    private Button mOk;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        boolean isSetting = getIntent().getBooleanExtra(FbUtils.INTENT_SETTINGS_EXTRA, false);
         setContentView(R.layout.activity_topics);
         setImageView();
         mBack = (Button) findViewById(R.id.bt_back);
         mBack.setOnClickListener(this);
         mNext = (Button) findViewById(R.id.bt_next);
         mNext.setOnClickListener(this);
+        mOk = (Button) findViewById(R.id.bt_ok);
+        mOk.setOnClickListener(this);
+        if (isSetting) {
+            mOk.setVisibility(View.VISIBLE);
+            mNext.setVisibility(View.GONE);
+        } else {
+            mOk.setVisibility(View.GONE);
+            mNext.setVisibility(View.VISIBLE);
+        }
     }
 
     private void setImageView() {
@@ -123,6 +134,7 @@ public class ChooseTopics extends Activity implements View.OnClickListener {
                 startActivity (new Intent(ChooseTopics.this, KeywordsPage.class));
                 break;
             case R.id.bt_back:
+            case R.id.bt_ok:
                 this.finish();
                 break;
             case R.id.iv_1_1:

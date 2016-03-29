@@ -57,4 +57,7 @@
 
     <string name="tv_list_news"><b>YOUR NEWS</b></string>
     <string name="tv_list_menu"><b>Settings</b></string>
+    <string name="tv_keywords_setting"><b>KEYWORDS\nSETTINGS</b></string>
+    <string name="tv_keywords_add"><b>ADD</b></string>
+    <string name="tv_keywords_delete"><b>DELETE</b></string>
 </resources>

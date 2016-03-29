@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,13 +27,16 @@ public class NewsSourcesPage extends Activity implements View.OnClickListener, A
     private Button mBack;
     private TextView mT1;
     private TextView mT2;
+    private LinearLayout mLl;
     private boolean selectAllState;
     NewsListAdapter mAdapter;
+    private Button mOk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_sources);
+        boolean isSetting = getIntent().getBooleanExtra(FbUtils.INTENT_SETTINGS_EXTRA, false);
         mListView = (ListView) findViewById(R.id.listView);
         mAdapter = new NewsListAdapter(this);
         mAdapter.setData();
@@ -47,6 +51,16 @@ public class NewsSourcesPage extends Activity implements View.OnClickListener, A
         mT2 = (TextView) findViewById(R.id.tv_l_2);
         mT2.setOnClickListener(this);
         selectAllState = false;
+        mLl = (LinearLayout) findViewById(R.id.ll_bot);
+        mOk = (Button) findViewById(R.id.bt_ok);
+        mOk.setOnClickListener(this);
+        if (isSetting) {
+            mOk.setVisibility(View.VISIBLE);
+            mLl.setVisibility(View.GONE);
+        } else {
+            mOk.setVisibility(View.GONE);
+            mLl.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -56,6 +70,7 @@ public class NewsSourcesPage extends Activity implements View.OnClickListener, A
                 startActivity(new Intent(this, ChooseTopics.class));
                 break;
             case R.id.bt_back:
+            case R.id.bt_ok:
                 this.finish();
                 break;
             case R.id.tv_l_1:

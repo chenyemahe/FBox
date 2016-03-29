@@ -2,12 +2,15 @@ package futurebox.com.fbox;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.text.TextUtils;
 import android.util.Log;
 
 /**
  * Created by ye1.chen on 3/23/16.
  */
 public class FbUtils {
+
+    public static final String INTENT_SETTINGS_EXTRA = "intent_settings_extra";
 
     public static final String FUTURE_BOX_PREFS = "future_box_prefs";
     public static final String FUTURE_BOX_STATE_1 = "future_box_state_1";
@@ -63,6 +66,8 @@ public class FbUtils {
     public static final String KEYWORD_15 = "keyword_15";
     public static final String KEYWORD_16 = "keyword_16";
     public static final String KEYWORD_17 = "keyword_17";
+
+    public static final String FUTURE_BOX_KEYWORDS_LIST = "future_box_keywords_list";
 
     public static String TAG = "Future_box";
 
@@ -228,6 +233,46 @@ public class FbUtils {
         return false;
     }
 
+    public static boolean saveCustomKeyword(Context context, String keywords) {
+        SharedPreferences prefs = context.getSharedPreferences(FUTURE_BOX_PREFS, 0);
+        String newList = getCustomKeywordList(context);
+        if (TextUtils.isEmpty(newList)) {
+            newList = keywords;
+        } else {
+            newList = newList + "," + keywords;
+        }
+        Log.d(TAG, "keyword update save checked keywords: " +  keywords);
+        return prefs.edit().putString(FUTURE_BOX_KEYWORDS_LIST, newList).commit();
+    }
+
+    public static String getCustomKeywordList(Context context) {
+        SharedPreferences prefs = context.getSharedPreferences(FUTURE_BOX_PREFS, 0);
+        return prefs.getString(FUTURE_BOX_KEYWORDS_LIST, "");
+    }
+
+    public static boolean removeCustomKeyword(Context context,String s) {
+        SharedPreferences prefs = context.getSharedPreferences(FUTURE_BOX_PREFS, 0);
+        String oldList = getCustomKeywordList(context);
+        String newList = "";
+        if (TextUtils.isEmpty(oldList)) {
+            return true;
+        } else if (TextUtils.equals(oldList, s)) {
+            newList = "";
+        } else {
+            String[] temp = oldList.split(",");
+            for(int i = 0; i < temp.length; i++ ) {
+                if (!TextUtils.equals(temp[i], s)) {
+                    if(TextUtils.isEmpty(newList)) {
+                        newList = temp[i];
+                    } else {
+                        newList += "," + temp[i];
+                    }
+                }
+            }
+        }
+        Log.d(TAG, "keyword remove save checked keywords: " +  s);
+        return prefs.edit().putString(FUTURE_BOX_KEYWORDS_LIST, newList).commit();
+    }
     public static int getCheckedBg() {
         return R.color.language_select;
     }

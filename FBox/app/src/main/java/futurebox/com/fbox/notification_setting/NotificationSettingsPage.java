@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import futurebox.com.fbox.FbUtils;
+import futurebox.com.fbox.FboxNotification;
 import futurebox.com.fbox.R;
 import futurebox.com.fbox.listnews.ListNewsPage;
 
@@ -31,6 +33,7 @@ public class NotificationSettingsPage extends Activity implements View.OnClickLi
 
     private Button mBack;
     private Button mNext;
+    private Button mOk;
 
     private boolean [] day = {false, false, false, false, false, false, false};
     private boolean [] notif = {false, false, false, false, false};
@@ -38,6 +41,7 @@ public class NotificationSettingsPage extends Activity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification_setting);
+        boolean isSetting = getIntent().getBooleanExtra(FbUtils.INTENT_SETTINGS_EXTRA, false);
         mDay1 = (TextView) findViewById(R.id.tv_sun);
         mDay2 = (TextView) findViewById(R.id.tv_mon);
         mDay3 = (TextView) findViewById(R.id.tv_tue);
@@ -69,6 +73,15 @@ public class NotificationSettingsPage extends Activity implements View.OnClickLi
         mNext = (Button) findViewById(R.id.bt_next);
         mBack.setOnClickListener(this);
         mNext.setOnClickListener(this);
+        mOk = (Button) findViewById(R.id.bt_ok);
+        mOk.setOnClickListener(this);
+        if (isSetting) {
+            mOk.setVisibility(View.VISIBLE);
+            mNext.setVisibility(View.GONE);
+        } else {
+            mOk.setVisibility(View.GONE);
+            mNext.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -186,6 +199,9 @@ public class NotificationSettingsPage extends Activity implements View.OnClickLi
                 startActivity(new Intent(this, ListNewsPage.class));
                 break;
             case R.id.bt_back:
+            case R.id.bt_ok:
+                FboxNotification n = new FboxNotification();
+                n.showNotification(this);
                 this.finish();
                 break;
             default:
