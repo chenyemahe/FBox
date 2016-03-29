@@ -40,6 +40,14 @@
         <activity android:name=".notification_setting.NotificationSettingsPage">
 
         </activity>
+
+        <activity android:name=".menu.menupage">
+
+        </activity>
+
+        <activity android:name=".listnews.ListNewsPage">
+
+        </activity>
     </application>
 
 </manifest>
